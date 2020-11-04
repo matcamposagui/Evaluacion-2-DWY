@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.inicio{
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    text-align: center;
+
+}
+.menuNavegacion ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    
+
+}
+
+.menuNavegacion a{
+    color: black;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image:#fff;
+    text-align: center;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px ;
+}
+.banner{
+    text-align:center;
+}
+
+.header{
+    background-image: linear-gradient(to right, rgba(255, 128, 119, 0.493) 0%, rgba(255, 133, 122, 0.479) 0%, rgba(255, 140, 127, 0.5) 21%, rgba(249, 144, 133, 0.466) 52%, rgba(207, 85, 107, 0.493) 78%, rgba(177, 42, 91, 0.473) 100%), url(../img/pexels-chevanon-photography-1108101.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    width: auto;
+    height: 420px;
+    
+}
+.head{
+    padding: 100px;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#contacto{
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    
+}
+
+.footerContent ul{
+    display: flex;
+    padding: 0;
+}
+
+.footerContent li{
+    width: 100%;
+    list-style: none;
+}
+
+.columna1{
+
+    max-width: 400px;
+}
+.columna1 h1{
+    font-size: 22px;
+}
+.columna1 p{
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.columna2{
+    max-width: 400px;
+}
+.columna2 h1{
+    font-size: 22px;
+}
+.columna2 p{
+    font-size: 14px;
+    margin-top: 20px;
+}
+

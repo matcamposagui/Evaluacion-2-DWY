@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/nosotros.css' %}">
+    <link href="{% static '/https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap' %}" rel="stylesheet">
+    <title>Shecurity</title>
+</head>
+<body>
+    <div class = "inicio">
+        <!--Logo-->
+        <img src = "{% static '/img/casco.svg' %}" alt="" class= "logo" width="50" height="50">
+        <p>Shecurity</p>
+        <!--Menu de navegacion-->
+        <nav class= "menuNavegacion">
+            <ul>
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/registro">Se parte de nosotros</a></li>
+            </ul>
+        </nav>
+        <!--Fin menu navegacion-->
+    </div>
+    <!--Fin inicio pagina-->    
+    <header class = "header" id = "inicio">
+        <div class = "contenedor head">
+            <h1>Lo mejor de nosotros a tu servicio</h1>
+            <p>Conocenos</p>
+        </div>
+    </header>
+        <!--Inicio de imagenes con flexbox-->
+        <h1 aling="center">Nosotros</h1>
+        <br>
+        <div class ="contenedorFotos">
+            <div class = "banner" id="img1">
+                <img src="{% static '/img/pexels-andrea-piacquadio-3769162.jpg' %}" alt="" width="200" heigth="400">
+                <p>
+                    Shecurity es una empresa comercializadora de productos de seguridad,<p>
+                    enfocados esencialmente a las mujeres para enfatizar en el uso de <p>
+                    zapatos de seguridad entre otros artefactos. <p>
+                    Tenemos la atención 24/7 en whatsapp y en el chat en línea con ejecutivos expertos.
+                </p>
+                <br>
+            <div>
+                <div class = "banner" id="img1">
+                    <img src="{% static '/img/pexels-pixabay-209719.jpg' %}" alt="" width="400" heigth="300">
+                    <p>
+                        Queremos estar a la vanguardia de un mundo más seguro, <p>
+                        ayudar a los trabajadores a alcanzar sus metas y <p>
+                        permanecer enfocados en forma y llenos de energía durante su trabajo.<p> 
+                        Vamos a ayudarles a mejorar su vida laboral.
+                    </p>
+                    <br>
+                <div>
+
+        </div>
+        <!--Fin de imagenes flebox-->
+
+    <!--Inicio footer-->
+    <footer id = "contacto">
+        <div class= "contenedor footerContent">
+            <ul>
+                <li div="columna1">
+                    <h1>Sobre nosotros</h1>
+                    <p>
+                        Shecurity es una empresa comercializadora de zapatos de seguridad como su principal
+                        producto, enfocado 100% a las mujeres. 
+                    </p>
+
+                </li>
+                <li div="columna2">
+                    <h1>Informacion de contacto</h1>
+                    <p>
+                        HOMETEST CHILE
+                        Av. Echeñique 5839, Of.509, La Reina, Santiago. <br>
+                        Ejecutivo directo de ventas :
+                        +569 7412 8541<br>
+                        Celular y whatsapp:
+                        +569 9742 6314<br>
+                        Telefono Casa Matriz Santiago:
+                        +562 9851 2347<br>
+                        Correo de cotización – consultas generales: ventas@shecurity.cl<br>
+                        Mala atencion o reclamos:
+                        +569 9854 1234 – post-venta@shecurity.cl
+                    </p>
+
+                </li>
+                <li div="columna3">
+                    <!--Ingresar correo-->
+                    <h1>Mas informacion</h1>
+                    <p>Ingrese su correo para recibir mas informacion sobre nuestros productos.</p>
+                    <label for="correo"></label>
+                    <input type="email" name="correo" id="correo"
+                    placeholder="Correo electronico" required onfocus="this.value=' '">
+                    <!--Funcion JS "validarCorreo" para validar el correo ingresado-->
+                    <button name="button" onclick= "validarCorreo(correo.value);">Enviar</button>
+                </li>
+            </ul>
+        </div>
+
+        
+    </footer>
+    <!--Fin footer-->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

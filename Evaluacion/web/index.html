@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Se vincula archivo css para el index-->
+    <link rel="stylesheet" href="{% static '/css/inicio.css' %}">
+    <!--Tipo de fuente-->
+    <link href="{% static '/https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap' %}" rel="stylesheet">
+    <script src="{% static '/https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' %}"></script>
+    
+    <!--Titulo de  la pestaña-->
+    <title>Shecurity</title>
+</head>
+<body>
+    <!--Inicio de la pagina con logo y menu de navegacion-->
+    <div class = "inicio">
+        <!--Logo-->
+        <img src = "{% static '/img/casco.svg' %}" alt="" class= "logo" width="50" height="50">
+        <p>Shecurity</p>
+        <div class = "inicio" id= "flotante">
+            <!--imagen del flotante-->
+            <a href="https://hometest.cl/"><img src="{% static 'img/corona.svg' %}"  width="40" height="40"></a>
+        </div>
+        <!--Menu de navegacion-->
+        <nav class= "menuNavegacion">
+            <ul>
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/nosotros">Nosotros</a></li>
+                <li><a href="/productos">Galeria de productos</a></li>
+                <li><a href="/registro">Se parte de nosotros</a></li>
+            </ul>
+        </nav>
+        <!--Fin menu navegacion-->
+    </div>
+    <!--Fin inicio pagina-->
+    <!--Inicio header-->
+    <header class = "header" id = "inicio">
+        <div class = "contenedor head">
+            <h1>La seguridad en tus pies.</h1>
+            <h3>Trabajamos para ustedes</h3>
+            <p>Eligenos</p>
+        </div>
+    </header>
+    <!--Fin de headder-->
+    <!--Inicio de imagenes con flexbox-->
+    <h1 aling="center">Alguno de nuestros modelos</h1>
+    <div class ="contenedorFotos">
+        <div class = "banner" id="img1">
+            <img src="{% static '/img/zapatoMujer1.jpg' %}" alt="" width="400" heigth="400">
+            
+        <div class = "banner" id="img2">
+            <img src="{% static '/img/zapatoMujer2.jpg' %}" alt="" width="400" heigth="400">
+            
+        </div>
+        <div class = "banner" id="img3">
+            <img src="{% static '/img/zapatoMujer3.jpg' %}" alt="" width="400" heigth="400">
+            
+        </div>
+    </div>
+    <!--Fin de imagenes flebox-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hBQbwfX8hgY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!--Inicio carrusel-->
+        <div class="slider">
+        <ul>
+            <li><img src="{% static '/img/Carrusel1.jpg' %}" widht="500" heigth="400" alt=""></li>
+            <li><img src="{% static '/img/Carrusel2.jpg' %}" widht="500" heigth="400" alt=""></li>
+            <li><img src="{% static '/img/Carrusel3.jpg' %}" widht="500" heigth="400" alt=""></li>
+            <li><img src="{% static '/img/Carrusel4.jpg' %}" widht="500" heigth="400" alt=""></li>
+        </ul>
+    </div>
+    <!--Fin carrusel-->
+    <!--Inicio footer-->
+    <footer id = "contacto">
+        <div class= "contenedor footerContent">
+            <ul>
+                <li div="columna1">
+                    <h1>Sobre nosotros</h1>
+                    <p>
+                        Shecurity es una empresa comercializadora de zapatos de seguridad como su principal
+                        producto, enfocado 100% a las mujeres. 
+                    </p>
+
+                </li>
+                <li div="columna2">
+                    <h1>Informacion de contacto</h1>
+                    <p>
+                        HOMETEST CHILE
+                        Av. Echeñique 5839, Of.509, La Reina, Santiago. <br>
+                        Ejecutivo directo de ventas :
+                        +569 7412 8541<br>
+                        Celular y whatsapp:
+                        +569 9742 6314<br>
+                        Telefono Casa Matriz Santiago:
+                        +562 9851 2347<br>
+                        Correo de cotización – consultas generales: ventas@shecurity.cl<br>
+                        Mala atencion o reclamos:
+                        +569 9854 1234 – post-venta@shecurity.cl
+                    </p>
+
+                </li>
+                <li div="columna3">
+                    <!--Ingresar correo-->
+                    <h1>Mas informacion</h1>
+                    <p>Ingrese su correo para recibir mas informacion sobre nuestros productos.</p>
+                    <label for="correo"></label>
+                    <input type="email" name="correo" id="correo"
+                    placeholder="Correo electronico" required onfocus="this.value=' '" autocomplete="off">
+                    <!--Funcion JS "validarCorreo" para validar el correo ingresado-->
+                    <button name="button" onclick= "validarCorreo(correo.value);">Enviar</button>
+                </li>
+            </ul>
+        </div>
+
+        
+    </footer>
+    <!--Fin footer-->
+    <!--Vinculo a archivo JavaScript para index-->
+    <script src="{% static '/js/main.js' %}"></script>
+</body>
+</html>

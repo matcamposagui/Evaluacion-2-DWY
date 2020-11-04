@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static '/https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/productos.css' %}">
+    <title>Galeria de productos</title>
+</head>
+<body>
+    <div class = "galeria">
+        <h1>Galeria de productos</h1>
+        <div class="linea"></div>
+        <div class="contenedor-imagenes">
+            <div class ="imagen">
+                <img src="{% static '/img/Productos/1.jpg' %}" alt="">
+                <div class= "overlay">
+                    <h2>$30.000</h2>
+                </div>
+            </div>
+            <div class ="imagen">
+                <img src="{% static '/img/Productos/2.jpg' %}" alt="">                <div class= "overlay">
+                    <h2>$30.000</h2>
+                </div>
+            </div>
+            <div class ="imagen">
+                <img src="{% static '/img/Productos/3.jpg' %}" alt="">                <div class= "overlay">
+                    <h2>$30.000</h2>
+                </div>
+            </div>
+            <div class ="imagen">
+                <img src="{% static '/img/Productos/4.jpg' %}" alt="">                <div class= "overlay">
+                    <h2>$30.000</h2>
+                </div>
+            </div>
+            <div class ="imagen">
+                <img src="{% static '/img/Productos/5.jpg' %}" alt="">                <div class= "overlay">
+                    <h2>$30.000</h2>
+                </div>
+            </div>
+            <div class ="imagen">
+                <img src="{% static '/img/Productos/6.jpg' %}" alt="">                <div class= "overlay">
+                    <h2>$30.000</h2>
+                </div>
+            </div>
+            <div class ="imagen">
+                <img src="{% static '/img/Productos/7.jpg' %}" alt="">                <div class= "overlay">
+                    <h2>$30.000</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
