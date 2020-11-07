@@ -13,6 +13,12 @@ def productos(request):
 def registro(request):
     return render(request, 'registro.html')   
 
+def login(request):
+    return render(request, 'login.html') 
+
+def logout_then_login(request):
+    return render(request,'index.html')
+
 def homeTest(request):
     pagina = """<a href="https://hometest.cl/"> """
     return HttpResponse (pagina)
