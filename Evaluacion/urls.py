@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
 from django.contrib.auth.views import LoginView, logout_then_login
 from django.contrib.auth import views as auth_views
-from Evaluacion.views import index, nosotros, productos, registro
+from Evaluacion.views import index, nosotros, productos, registro, login, galeria, logout
 from . import views
 
 urlpatterns = [
@@ -28,12 +31,20 @@ urlpatterns = [
     path('registro/', registro),
     #path('', LoginView.as_view(template_name="login.html")),
     path('', views.index, name='index'),
-    path('login/', views.index, name='login')
+    path('login/', views.index, name='login'),
+    path('login/', views.logout, name='logout'),
+    #path('galeria/', galeria),
+    path('galeria/', views.image_upload_view)
+    
+
 ]
 
 urlpatterns+= [
 
     path('accounts/', include ('django.contrib.auth.urls')),
 
-
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

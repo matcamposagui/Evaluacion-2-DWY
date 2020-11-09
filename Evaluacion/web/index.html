@@ -18,7 +18,8 @@
     <div class = "inicio">
         <!--Logo-->
         <img src = "{% static '/img/casco.svg' %}" alt="" class= "logo" width="50" height="50">
-        <p>Shecurity</p>
+        <p>Shecurity
+        </p>
         <div class = "inicio" id= "flotante">
             <!--imagen del flotante-->
             <a href="https://hometest.cl/"><img src="{% static 'img/corona.svg' %}"  width="40" height="40"></a>
@@ -30,7 +31,16 @@
                 <li><a href="/nosotros">Nosotros</a></li>
                 <li><a href="/productos">Galeria de productos</a></li>
                 <li><a href="/registro">Se parte de nosotros</a></li>
+                {% if user.is_staff %}
+                <li><a href="/galeria">Galeria</a></li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <li><a href="accounts/login">Cerrar sesion</a></li>
+                {% else %}
+                <li><a href="accounts/login">Iniciar sesion</a></li>
+                {% endif %}
             </ul>
+
         </nav>
         <!--Fin menu navegacion-->
     </div>
@@ -38,6 +48,7 @@
     <!--Inicio header-->
     <header class = "header" id = "inicio">
         <div class = "contenedor head">
+            Bienvenido <b>{{request.user.username}}</b>
             <h1>La seguridad en tus pies.</h1>
             <h3>Trabajamos para ustedes</h3>
             <p>Eligenos</p>
